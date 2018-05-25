@@ -1,0 +1,29 @@
+<html>
+<head>
+
+
+<script src="lib/lang.js"></script>
+<script src="lib/badwords.js"></script>
+<script>
+
+function fixWords() {
+        filter = new Filter();
+        document.getElementById("textbox").value = filter.clean(document.getElementById("textbox").value);
+        //use JS to submit your form here if needed
+        return false;
+}
+
+</script>
+
+
+</head>
+<body>
+<form action="#" method="post" onSubmit="return fixWords();" >
+<p>Enter text:
+<br /><textarea name="content" id="textbox" class="form-control" rows="5" cols="60" ></textarea></p>
+<p><input type="submit" value="Save Text and Remove Bad Words" /></p>
+</form>
+
+
+</body>
+</html>
